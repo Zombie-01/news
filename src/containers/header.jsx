@@ -757,22 +757,22 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link color-pink-hover" href="/fashion">
-                    Fashion
+                    <a>Fashion</a>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link color-red-hover" href="/food">
-                    Food
+                    <a>Food</a>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link color-aqua-hover" href="/lifestyle">
-                    Lifestyle
+                    <a>LifeStyle</a>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link color-green-hover" href="/travel">
-                    Travel
+                    <a>Travel</a>
                   </Link>
                 </li>
                 <li className="nav-item">
