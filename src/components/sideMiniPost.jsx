@@ -1,12 +1,12 @@
 import blog_12 from "../upload/blog_12.jpg";
-
+import Img from "./img";
 const SideMiniPost = () => {
   return (
     <>
       <div className="blog-box">
         <div className="post-media">
           <a href="single.html" title="">
-            <img src={blog_12.src} alt="" className="img-fluid" />
+            <Img src={blog_12.src} alt="" className="img-fluid" />
             <div className="hovereffect">
               <span className="videohover"></span>
             </div>

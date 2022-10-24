@@ -1,12 +1,12 @@
 import authhor from "../upload/author_02.jpg";
-
+import Img from "./img";
 const CubBox = () => {
   return (
     <>
       <div class="blog-box">
         <div class="post-media">
           <a href="single.html" title="">
-            <img src={authhor.src} alt="" class="img-fluid" />
+            <Img src={authhor.src} alt="" class="img-fluid" />
             <div class="hovereffect">
               <span></span>
             </div>

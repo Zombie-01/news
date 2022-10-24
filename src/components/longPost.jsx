@@ -1,11 +1,12 @@
 import blog_01 from "../upload/blog_01.jpg";
+import Img from "./img";
 const LongPost = ({ style }) => {
   return (
     <>
       <div className="blog-box" style={style}>
         <div className="post-media">
           <a href="single.html" title="">
-            <img src={blog_01.src} alt="" className="img-fluid" />
+            <Img src={blog_01.src} alt="" className="img-fluid" />
             <div className="hovereffect">
               <span></span>
             </div>

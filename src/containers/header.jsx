@@ -2,6 +2,7 @@ import React from "react";
 import menu_04 from "../upload/menu_04.jpg";
 import logo from "../images/logo.png";
 import Link from "next/link";
+import Img from "../components/img";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
             <div className="col-md-12">
               <div className="logo">
                 <a href="index.html">
-                  <img src={logo.src} alt="" />
+                  <Img src={logo.src} alt="" />
                 </a>
               </div>
             </div>
@@ -101,7 +102,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -124,7 +125,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -148,7 +149,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -171,7 +172,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -198,7 +199,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -222,7 +223,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -248,7 +249,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -272,7 +273,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -299,7 +300,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -323,7 +324,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -347,7 +348,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -372,7 +373,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -399,7 +400,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -423,7 +424,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -447,7 +448,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -473,7 +474,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -501,7 +502,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -527,7 +528,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -553,7 +554,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -578,7 +579,7 @@ const Header = () => {
                                 <div className="blog-box">
                                   <div className="post-media">
                                     <a href="single.html" title="">
-                                      <img
+                                      <Img
                                         src={menu_04.src}
                                         alt=""
                                         className="img-fluid"
@@ -755,24 +756,24 @@ const Header = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link color-pink-hover" href="/fashion">
+                  <Link className="nav-link color-pink-hover" href="/fashion">
                     Fashion
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link color-red-hover" href="/food">
+                  <Link className="nav-link color-red-hover" href="/food">
                     Food
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link color-aqua-hover" href="/lifestyle">
+                  <Link className="nav-link color-aqua-hover" href="/lifestyle">
                     Lifestyle
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link color-green-hover" href="/travel">
+                  <Link className="nav-link color-green-hover" href="/travel">
                     Travel
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a

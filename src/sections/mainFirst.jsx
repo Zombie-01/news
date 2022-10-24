@@ -3,6 +3,7 @@ import blog_masonry_02 from "../upload/blog_masonry_02.jpg";
 import blog_masonry_03 from "../upload/blog_masonry_03.jpg";
 import blog_masonry_04 from "../upload/blog_masonry_04.jpg";
 import blog_masonry_05 from "../upload/blog_masonry_05.jpg";
+import Img from "../components/img";
 
 const ImageNews = () => {
   return (
@@ -11,7 +12,7 @@ const ImageNews = () => {
         <div className="masonry-blog clearfix">
           <div className="left-side">
             <div className="masonry-box post-media">
-              <img src={blog_masonry_01.src} alt="" className="img-fluid" />
+              <Img src={blog_masonry_01.src} alt="" className="img-fluid" />
               <div className="shadoweffect">
                 <div className="shadow-desc">
                   <div className="blog-meta">
@@ -43,7 +44,7 @@ const ImageNews = () => {
 
           <div className="center-side">
             <div className="masonry-box post-media">
-              <img src={blog_masonry_02.src} alt="" className="img-fluid" />
+              <Img src={blog_masonry_02.src} alt="" className="img-fluid" />
               <div className="shadoweffect">
                 <div className="shadow-desc">
                   <div className="blog-meta">
@@ -73,7 +74,7 @@ const ImageNews = () => {
             </div>
 
             <div className="masonry-box small-box post-media">
-              <img src={blog_masonry_03.src} alt="" className="img-fluid" />
+              <Img src={blog_masonry_03.src} alt="" className="img-fluid" />
               <div className="shadoweffect">
                 <div className="shadow-desc">
                   <div className="blog-meta">
@@ -93,7 +94,7 @@ const ImageNews = () => {
             </div>
 
             <div className="masonry-box small-box post-media">
-              <img src={blog_masonry_04.src} alt="" className="img-fluid" />
+              <Img src={blog_masonry_04.src} alt="" className="img-fluid" />
               <div className="shadoweffect">
                 <div className="shadow-desc">
                   <div className="blog-meta">
@@ -115,7 +116,7 @@ const ImageNews = () => {
 
           <div className="right-side hidden-md-down">
             <div className="masonry-box post-media">
-              <img src={blog_masonry_05.src} alt="" className="img-fluid" />
+              <Img src={blog_masonry_05.src} alt="" className="img-fluid" />
               <div className="shadoweffect">
                 <div className="shadow-desc">
                   <div className="blog-meta">

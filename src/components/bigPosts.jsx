@@ -1,12 +1,12 @@
 import image from "../upload/blog_custom_01.jpg";
-
+import Img from "./img";
 const BigPost = () => {
   return (
     <>
       <div class="blog-box">
         <div class="post-media">
           <a href="single.html" title="">
-            <img src={image.src} alt="" class="img-fluid" />
+            <Img src={image.src} alt="" class="img-fluid" />
             <div class="hovereffect">
               <span></span>
             </div>

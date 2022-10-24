@@ -1,5 +1,5 @@
 import blog_05 from "../upload/blog_05.jpg";
-
+import Img from "./img";
 const SecondMainPost = ({ title, list }) => {
   return (
     <>
@@ -18,7 +18,7 @@ const SecondMainPost = ({ title, list }) => {
               <div className="blog-box">
                 <div className="post-media">
                   <a href="single.html" title="">
-                    <img src={blog_05.src} alt="" className="img-fluid" />
+                    <Img src={blog_05.src} alt="" className="img-fluid" />
                     <div className="hovereffect">
                       <span></span>
                     </div>

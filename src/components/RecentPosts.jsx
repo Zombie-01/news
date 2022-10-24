@@ -1,4 +1,5 @@
 import blog_square_06 from "../upload/blog_square_06.jpg";
+import Img from "./img";
 const RecentPosts = () => {
   const array = [1, 2, 3];
   return (
@@ -13,7 +14,7 @@ const RecentPosts = () => {
               className="list-group-item list-group-item-action flex-column align-items-start"
             >
               <div className="w-100 justify-content-between">
-                <img
+                <Img
                   src={blog_square_06.src}
                   alt=""
                   className="img-fluid float-left"
