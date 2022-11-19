@@ -1,12 +1,33 @@
 import blog_05 from "../upload/blog_05.jpg";
-import Img from "./img";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
 const SecondMainPost = ({ title, list }) => {
+  const router = useRouter();
   return (
     <>
       <div className="section-title">
-        <h3 className={title === "Lifestyle" ? "color-aqua" : ""}>
+        <h3
+          className={` ${
+            router.query?.first === "Энтертайнмент"
+              ? "color-blue"
+              : router.query?.first === "Зөвлөгөө"
+              ? "color-pink"
+              : router.query?.first === "Технологи"
+              ? "color-red"
+              : router.query?.first === "Хэвмаяг"
+              ? "color-aqua"
+              : router.query?.first === "Дизайн"
+              ? "color-green"
+              : router.query?.first === "Спорт"
+              ? "color-grey"
+              : router.query?.first === "Дэлхий"
+              ? "color-grey"
+              : ""
+          }`}
+        >
           <a href="blog-category-01.html" title="">
-            {title}
+            {router.query?.second}
           </a>
         </h3>
       </div>
@@ -14,21 +35,29 @@ const SecondMainPost = ({ title, list }) => {
       <div className="row">
         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           {list.map((e, i) => (
-            <>
+            <div key={i}>
               <div className="blog-box">
                 <div className="post-media">
-                  <a href="single.html" title="">
-                    <Img src={blog_05.src} alt="" className="img-fluid" />
-                    <div className="hovereffect">
-                      <span></span>
-                    </div>
-                  </a>
+                  <Link
+                    href={`/${router.query?.first}/${router.query?.second}/${i}`}
+                  >
+                    <a title="">
+                      <img src={blog_05.src} alt="" className="img-fluid" />
+                      <div className="hovereffect">
+                        <span></span>
+                      </div>
+                    </a>
+                  </Link>
                 </div>
                 <div className="blog-meta big-meta">
                   <h4>
-                    <a href="single.html" title="">
-                      The golden rules you need to know for a positive life
-                    </a>
+                    <Link
+                      href={`/${router.query?.first}/${router.query?.second}/${i}`}
+                    >
+                      <a title="">
+                        The golden rules you need to know for a positive life
+                      </a>
+                    </Link>
                   </h4>
                   <p>
                     Aenean interdum arcu blandit, vehicula magna non, placerat
@@ -37,24 +66,30 @@ const SecondMainPost = ({ title, list }) => {
                     maximus tempor odio.
                   </p>
                   <small>
-                    <a href="blog-category-01.html" title="">
-                      Lifestyle
-                    </a>
+                    <Link
+                      href={`/${router.query?.first}/${router.query?.second}/${i}`}
+                    >
+                      <a title="">{router.query?.first}</a>
+                    </Link>
                   </small>
                   <small>
-                    <a href="single.html" title="">
-                      24 July, 2017
-                    </a>
+                    <Link
+                      href={`/${router.query?.first}/${router.query?.second}/${i}`}
+                    >
+                      <a title="">24 July, 2017</a>
+                    </Link>
                   </small>
                   <small>
-                    <a href="blog-author.html" title="">
-                      by Amanda
-                    </a>
+                    <Link
+                      href={`/${router.query?.first}/${router.query?.second}/${i}`}
+                    >
+                      <a title="">by Amanda</a>
+                    </Link>
                   </small>
                 </div>
               </div>
               <hr className="invis" />
-            </>
+            </div>
           ))}
         </div>
       </div>

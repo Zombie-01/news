@@ -1,4 +1,3 @@
-import Img from "../components/img";
 import PopularCategorys from "../components/popularCategory";
 import RecentPosts from "../components/RecentPosts";
 
@@ -21,7 +20,7 @@ const Footer = () => {
             <div className="widget">
               <div className="footer-text text-center">
                 <a href="index.html">
-                  <Img src="images/flogo.png" alt="" className="img-fluid" />
+                  <img src="images/flogo.png" alt="" className="img-fluid" />
                 </a>
                 <p>
                   Cloapedia is a personal blog for handcrafted, cameramade

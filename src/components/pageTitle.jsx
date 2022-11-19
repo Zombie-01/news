@@ -1,4 +1,8 @@
-const PageTitle = ({ title }) => {
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+const PageTitle = () => {
+  const router = useRouter();
   return (
     <>
       <div className="page-title wb">
@@ -8,32 +12,49 @@ const PageTitle = ({ title }) => {
               <h2>
                 <i
                   className={`fa fa-shopping-bag ${
-                    title === "Fashion"
+                    router.query?.first === "Энтертайнмент"
+                      ? "bg-blue"
+                      : router.query?.first === "Зөвлөгөө"
                       ? "bg-pink"
-                      : title === "Food & Drink"
+                      : router.query?.first === "Технологи"
                       ? "bg-red"
-                      : title === "Lifestyle"
+                      : router.query?.first === "Хэвмаяг"
                       ? "bg-aqua"
-                      : title === "Travel"
+                      : router.query?.first === "Дизайн"
                       ? "bg-green"
+                      : router.query?.first === "Спорт"
+                      ? "bg-grey"
+                      : router.query?.first === "Дэлхий"
+                      ? "color-grey"
                       : ""
                   }`}
-                ></i>{" "}
-                {title}
-                <small className="hidden-xs-down hidden-sm-down">
-                  Nulla felis eros, varius sit amet volutpat non.{" "}
-                </small>
+                ></i>
+                {router.query?.first}
               </h2>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
               <ol className="breadcrum">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <Link href="/">
+                    <a>Эхлэл</a>
+                  </Link>
                 </li>
-                <li className="breadcrumb-item">
-                  <a href="#">Blog</a>
-                </li>
-                <li className="breadcrumb-item active">{title}</li>
+                {router.query?.second ? (
+                  <>
+                    <li className="breadcrumb-item">
+                      <Link href={`/${router.query?.first}`}>
+                        <a>{router.query?.first}</a>
+                      </Link>
+                    </li>
+                    <li className="breadcrumb-item active">
+                      {router.query?.second}
+                    </li>
+                  </>
+                ) : (
+                  <li className="breadcrumb-item active">
+                    {router.query?.first}
+                  </li>
+                )}
               </ol>
             </div>
           </div>

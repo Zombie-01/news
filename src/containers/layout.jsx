@@ -1,27 +1,22 @@
 import Header from "./header";
 import Footer from "./footer";
 import TopBar from "./extraHeader";
-import styled from "styled-components";
 import Script from "next/script";
 
 const Layout = ({ children }) => {
   return (
     <>
       <div id="wrapper">
-        <TopBar />
-        <LayoutDiv>
-          <Header />
+        {/* <TopBar /> */}
+
+        <div style={{ width: "100%" }}>
+          {/* <Header /> */}
           {children}
-          <Footer />
-        </LayoutDiv>
+          {/* <Footer /> */}
+        </div>
       </div>
     </>
   );
 };
 
 export default Layout;
-
-const LayoutDiv = styled("div")`
-  margin: auto;
-  width: 100%;
-`;

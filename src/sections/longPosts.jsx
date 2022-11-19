@@ -13,17 +13,17 @@ const LongPosts = ({ title, list }) => {
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           {list.map((e, i) => (
-            <>
+            <div key={i}>
               <LongPost />
-            </>
+            </div>
           ))}
         </div>
 
         <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           {list.map((e, i) => (
-            <>
+            <div key={i}>
               <LongPost />
-            </>
+            </div>
           ))}
         </div>
       </div>

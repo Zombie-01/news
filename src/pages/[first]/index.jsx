@@ -4,52 +4,57 @@ import MiniSideBar from "../../containers/miniSideBar";
 import LongPost from "../../components/longPost";
 import CubBox from "../../components/cubPost";
 import Pagination from "../../components/pagination";
+import Header from "../../containers/header";
+import Footer from "../../containers/footer";
+import { useRouter } from "next/router";
 
 const Fashoin = () => {
+  const router = useRouter();
   return (
     <>
-      <PageTitle title="Fashion" />
-      <section class="section wb">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+      <Header />
+      <PageTitle />
+      <section className="section wb">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <MiniSideBar />
             </div>
-            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-              <div class="page-wrapper">
-                <div class="row">
+            <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+              <div className="page-wrapper">
+                <div className="row">
                   <Banner />
                 </div>
-                <hr class="invis" />
-                <div class="portfolio row">
-                  <div class="pitem item-w1 item-h1">
+                <hr className="invis" />
+                <div className="portfolio row">
+                  <div className="pitem item-w1 item-h1">
                     <LongPost
                       style={{
                         width: "380px",
                       }}
                     />
                   </div>
-                  <div class="pitem item-w1 item-h1">
+                  <div className="pitem item-w1 item-h1">
                     <CubBox />
                   </div>
-                  <div class="pitem item-w1 item-h1">
+                  <div className="pitem item-w1 item-h1">
                     <LongPost
                       style={{
                         width: "380px",
                       }}
                     />
                   </div>
-                  <div class="pitem item-w1 item-h1">
+                  <div className="pitem item-w1 item-h1">
                     <LongPost
                       style={{
                         width: "380px",
                       }}
                     />
                   </div>
-                  <hr class="invis" />
+                  <hr className="invis" />
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
+                <div className="row">
+                  <div className="col-md-12">
                     <Pagination />
                   </div>
                 </div>
@@ -58,6 +63,7 @@ const Fashoin = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

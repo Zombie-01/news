@@ -2,19 +2,20 @@ import React from "react";
 import menu_04 from "../upload/menu_04.jpg";
 import logo from "../images/logo.png";
 import Link from "next/link";
-import Img from "../components/img";
+import TopBar from "./extraHeader";
 
 const Header = () => {
   return (
     <>
+      <TopBar />
       <div className="header-section">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="logo">
-                <a href="index.html">
-                  <Img src={logo.src} alt="" />
-                </a>
+                <Link href="/">
+                  <img src={logo.src} alt="" />
+                </Link>
               </div>
             </div>
           </div>
@@ -41,755 +42,314 @@ const Header = () => {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link href="/">
-                    <a className="nav-link color-pink-hover">Home</a>
+                    <a className="nav-link color-orange-hover">Эхлэл</a>
                   </Link>
                 </li>
-                <li className="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
-                  <Link href="#">
+                <li className="nav-item dropdown has-submenu">
+                  <Link href={"/Энтертайнмент"}>
                     <a
-                      className="nav-link dropdown-toggle"
-                      id="dropdown01"
+                      className="nav-link dropdown-toggle "
+                      id="dropdown02"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Categories
+                      Энтертайнмент
                     </a>
                   </Link>
-                  <ul
-                    className="dropdown-menu megamenu"
-                    aria-labelledby="dropdown01"
-                  >
+                  <ul className="dropdown-menu" aria-labelledby="dropdown02">
                     <li>
-                      <div className="mega-menu-content clearfix">
-                        <div className="tab">
-                          <button
-                            className="tablinks active"
-                            onclick="openCategory(event, 'cat01')"
-                          >
-                            Beauty
-                          </button>
-                          <button
-                            className="tablinks"
-                            onclick="openCategory(event, 'cat02')"
-                          >
-                            Fashion
-                          </button>
-                          <button
-                            className="tablinks"
-                            onclick="openCategory(event, 'cat03')"
-                          >
-                            Travel
-                          </button>
-                          <button
-                            className="tablinks"
-                            onclick="openCategory(event, 'cat04')"
-                          >
-                            Architecture
-                          </button>
-                          <button
-                            className="tablinks"
-                            onclick="openCategory(event, 'cat05')"
-                          >
-                            Recipes
-                          </button>
-                        </div>
-
-                        <div className="tab-details clearfix">
-                          <div id="cat01" className="tabcontent active">
-                            <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Spa</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Top 10+ care advice for your toenails
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Beauty</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        The secret of your beauty is handmade
-                                        soap
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Beauty</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Benefits of face mask made from mud
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Spa</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Relax with the unique warmth of candle
-                                        flavor
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="cat02" className="tabcontent">
-                            <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Fashion</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        2017 summer stamp will have design
-                                        models here
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Collections
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Which color is the most suitable color
-                                        for you?
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Fashion</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Subscribe to these sites to keep an eye
-                                        on the fashion
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Trends</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        The most trends of this year with color
-                                        combination
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="cat03" className="tabcontent">
-                            <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Tourism</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        I visited the architects of Istanbul for
-                                        you
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Travel</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Prepared handmade dish dish in the
-                                        Netherlands
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        City Tours
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        I recommend you visit the fairy chimneys
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Tourism</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        One of the most beautiful ports in the
-                                        world
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="cat04" className="tabcontent">
-                            <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Places</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        A collection of the most beautiful shop
-                                        designs
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Designs</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Americas and Canadas most beautiful wine
-                                        houses
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Minimalism
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        The most professional ways to color your
-                                        walls
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Furnishings
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Stylish cabinet designs and furnitures
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="cat05" className="tabcontent">
-                            <div className="row">
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Vegetables
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Grilled vegetable with fish prepared
-                                        with fish
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Restaurants
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        The worlds finest and clean meat
-                                        restaurants
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">
-                                        Meat foods
-                                      </span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Fried veal and vegetable dish
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                <div className="blog-box">
-                                  <div className="post-media">
-                                    <a href="single.html" title="">
-                                      <Img
-                                        src={menu_04.src}
-                                        alt=""
-                                        className="img-fluid"
-                                      />
-                                      <div className="hovereffect"></div>
-                                      <span className="menucat">Pastas</span>
-                                    </a>
-                                  </div>
-                                  <div className="blog-meta">
-                                    <h4>
-                                      <a href="single.html" title="">
-                                        Tasty pasta sauces and recipes
-                                      </a>
-                                    </h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <Link href={"/Энтертайнмент/Дуухөгжим"}>
+                        <a className="dropdown-item">
+                          Дуу хөгжим
+                          <span className="hidden-md-down hidden-sm-down hidden-xs-down">
+                            <i className="fa fa-angle-right"></i>
+                          </span>
+                        </a>
+                      </Link>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <Link href={"/Энтертайнмент/Дуухөгжим/Гадаад"}>
+                            <a className="dropdown-item">Гадаад дуу клип</a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Видео"}>
+                        <a className="dropdown-item">
+                          Видео
+                          <span className="hidden-md-down hidden-sm-down hidden-xs-down"></span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Кино"}>
+                        <a className="dropdown-item">Кино ертөнц</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Сонинхачин"}>
+                        <a className="dropdown-item">Сонин хачин</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Фотозураг"}>
+                        <a className="dropdown-item" href="page.html">
+                          Фото зураг
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Тоглоом"}>
+                        <a className="dropdown-item" href="page-fullwidth.html">
+                          Тоглоом
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Энтертайнмент/Шоубизнес"}>
+                        <a className="dropdown-item">Шоу бизнес</a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown has-submenu">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="dropdown02"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Features
-                  </a>
+                  <Link href={"/Зөвлөгөө"}>
+                    <a
+                      className="nav-link dropdown-toggle color-pink-hover"
+                      id="dropdown02"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Зөвлөгөө
+                    </a>
+                  </Link>
                   <ul className="dropdown-menu" aria-labelledby="dropdown02">
                     <li>
-                      <a className="dropdown-item" href="single.html">
-                        Single Blog{" "}
-                        <span className="hidden-md-down hidden-sm-down hidden-xs-down">
-                          <i className="fa fa-angle-right"></i>
-                        </span>
-                      </a>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <a className="dropdown-item" href="single.html">
-                            Single Default
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="single-fullwidth.html"
-                          >
-                            Single Fullwidth
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="single-slider.html"
-                          >
-                            Single Gallery
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="single-video.html">
-                            Single Video
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="single-audio.html">
-                            Single Audio
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="single-no-media.html"
-                          >
-                            Single No Media
-                          </a>
-                        </li>
-                      </ul>
+                      <Link href={"/Зөвлөгөө/Ахуйамьдрал"}>
+                        <a className="dropdown-item">Ахуй амьдрал</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="single.html">
-                        Blog Category{" "}
-                        <span className="hidden-md-down hidden-sm-down hidden-xs-down">
-                          <i className="fa fa-angle-right"></i>
-                        </span>
-                      </a>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-01.html"
-                          >
-                            Blog Category A
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-02.html"
-                          >
-                            Blog Category B
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-03.html"
-                          >
-                            Blog Category C
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-04.html"
-                          >
-                            Blog Category D
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-05.html"
-                          >
-                            Blog Category E
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            href="blog-category-06.html"
-                          >
-                            Blog Category F
-                          </a>
-                        </li>
-                      </ul>
+                      <Link href={"/Зөвлөгөө/Гоосайхан"}>
+                        <a className="dropdown-item">
+                          Гоо сайхан
+                          <span className="hidden-md-down hidden-sm-down hidden-xs-down"></span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="blog-author.html">
-                        Blog Author
-                      </a>
+                      <Link href={"/Зөвлөгөө/Лайфхак"}>
+                        <a className="dropdown-item">Лайф хак</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="page-contact.html">
-                        Contact Page
-                      </a>
+                      <Link href={"/Зөвлөгөө/Зурхай"}>
+                        <a className="dropdown-item">Зурхай</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="page.html">
-                        Default Page
-                      </a>
+                      <Link href={"/Зөвлөгөө/Сонжоо"}>
+                        <a className="dropdown-item" href="page.html">
+                          Сонжоо, тест
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="page-fullwidth.html">
-                        Fullwidth Page
-                      </a>
+                      <Link href={"/Зөвлөгөө/Бизнес"}>
+                        <a className="dropdown-item" href="page-fullwidth.html">
+                          Бизнес, мөнгө санхүү
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="page-404.html">
-                        Not Found Page
-                      </a>
+                      <Link href={"/Зөвлөгөө/Сэтгэлзүй"}>
+                        <a className="dropdown-item">Сэтгэлзүй</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="page-sitemap.html">
-                        Sitemap & Archives
-                      </a>
+                      <Link href={"/Зөвлөгөө/Турах"}>
+                        <a className="dropdown-item">Турах</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Зөвлөгөө/Хайр"}>
+                        <a className="dropdown-item">Хайр, гэр бүл</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Зөвлөгөө/Эрүүлмэнд"}>
+                        <a className="dropdown-item">Эрүүл мэнд</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown has-submenu">
+                  <Link href={"/Технологи"}>
+                    <a
+                      className="nav-link dropdown-toggle color-red-hover"
+                      id="dropdown02"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Технологи
+                    </a>
+                  </Link>
+                  <ul className="dropdown-menu" aria-labelledby="dropdown02">
+                    <li>
+                      <Link href={"/Технологи/Авто"}>
+                        <a className="dropdown-item">Авто</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Технологи/Гаджет"}>
+                        <a className="dropdown-item">Гаджет</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Технологи/Техник"}>
+                        <a className="dropdown-item">Техник</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Технологи/Шинэсанаа"}>
+                        <a className="dropdown-item">Шинэ санаа</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown has-submenu">
+                  <Link href={"/Хэвмаяг"}>
+                    <a
+                      className="nav-link dropdown-toggle color-aqua-hover"
+                      id="dropdown02"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Хэв маяг
+                    </a>
+                  </Link>
+                  <ul className="dropdown-menu" aria-labelledby="dropdown02">
+                    <li>
+                      <Link href={"/Хэвмаяг/БүтээлчСанаа"}>
+                        <a className="dropdown-item">Бүтээлч санаа</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Хэвмаяг/Загвар"}>
+                        <a className="dropdown-item">Загвар</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Хэвмаяг/Мэдлэг"}>
+                        <a className="dropdown-item">Мэдлэг</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Хэвмаяг/Хоолхүнс"}>
+                        <a className="dropdown-item">Хоол хүнс</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Хэвмаяг/Хүмүүс"}>
+                        <a className="dropdown-item">Хүмүүс</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown has-submenu">
+                  <Link href={"/Дизайн"}>
+                    <a
+                      className="nav-link dropdown-toggle color-green-hover"
+                      id="dropdown02"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Дизайн
+                    </a>
+                  </Link>
+                  <ul className="dropdown-menu" aria-labelledby="dropdown02">
+                    <li>
+                      <Link href={"/Дизайн/Архтектур"}>
+                        <a className="dropdown-item">Архтектур</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дизайн/График"}>
+                        <a className="dropdown-item">График</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дизайн/Дижиталарт"}>
+                        <a className="dropdown-item">Дижитал арт</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дизайн/Интерьер"}>
+                        <a className="dropdown-item">Интерьер</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дизайн/Сурталчилгаа"}>
+                        <a className="dropdown-item">Сурталчилгаа</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown has-submenu">
+                  <Link href={"/Дэлхий"}>
+                    <a
+                      className="nav-link dropdown-toggle color-yelow-hover"
+                      id="dropdown02"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Дэлхий
+                    </a>
+                  </Link>
+                  <ul className="dropdown-menu" aria-labelledby="dropdown02">
+                    <li>
+                      <Link href={"/Дэлхий/Байгаль"}>
+                        <a className="dropdown-item">Байгаль</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дэлхий/Анамьтад"}>
+                        <a className="dropdown-item">Ан амьтад</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дэлхий/Түүх"}>
+                        <a className="dropdown-item">Түүх</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дэлхий/Хүмүүс"}>
+                        <a className="dropdown-item">Хүмүүс</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/Дэлхий/Үйлявдал"}>
+                        <a className="dropdown-item">Үйл явдал</a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link color-pink-hover" href="/fashion">
-                    <a>Fashion</a>
+                  <Link href={"/Спорт"}>
+                    <a
+                      className="nav-link color-grey-hover"
+                      href="blog-category-06.html"
+                    >
+                      Спорт
+                    </a>
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link color-red-hover" href="/food">
-                    <a>Food</a>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link color-aqua-hover" href="/lifestyle">
-                    <a>LifeStyle</a>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link color-green-hover" href="/travel">
-                    <a>Travel</a>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link color-yellow-hover"
-                    href="blog-category-05.html"
-                  >
-                    <i className="fa fa-play-circle-o"></i> Vlogs
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link color-grey-hover"
-                    href="blog-category-06.html"
-                  >
-                    Health
-                  </a>
                 </li>
               </ul>
             </div>

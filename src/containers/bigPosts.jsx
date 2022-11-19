@@ -3,7 +3,7 @@ import BigPost from "../components/bigPosts";
 const BigPosts = ({ list }) => {
   return (
     <>
-      <div class="blog-custom-build">
+      <div className="blog-custom-build">
         {list.map((e, i) => (
           <>
             <BigPost />
@@ -11,7 +11,7 @@ const BigPosts = ({ list }) => {
         ))}
       </div>
 
-      <hr class="invis"></hr>
+      <hr className="invis"></hr>
     </>
   );
 };

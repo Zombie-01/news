@@ -1,22 +1,43 @@
+import { useRouter } from "next/router";
 import authhor from "../upload/author_02.jpg";
-import Img from "./img";
+import Link from "next/link";
+
 const CubBox = () => {
+  const router = useRouter();
   return (
     <>
-      <div class="blog-box">
-        <div class="post-media">
+      <div className="blog-box">
+        <div className="post-media">
           <a href="single.html" title="">
-            <Img src={authhor.src} alt="" class="img-fluid" />
-            <div class="hovereffect">
+            <img src={authhor.src} alt="" className="img-fluid" />
+            <div className="hovereffect">
               <span></span>
             </div>
           </a>
         </div>
-        <div class="blog-meta">
-          <span class="bg-pink">
-            <a href="blog-category-01.html" title="">
-              Fashion
-            </a>
+        <div className="blog-meta">
+          <span
+            className={`${
+              router.query?.first === "Энтертайнмент"
+                ? "bg-blue"
+                : router.query?.first === "Зөвлөгөө"
+                ? "bg-pink"
+                : router.query?.first === "Технологи"
+                ? "bg-red"
+                : router.query?.first === "Хэвмаяг"
+                ? "bg-aqua"
+                : router.query?.first === "Дизайн"
+                ? "bg-green"
+                : router.query?.first === "Спорт"
+                ? "bg-grey"
+                : router.query?.first === "Дэлхий"
+                ? "color-grey"
+                : ""
+            }`}
+          >
+            <Link href={`/${router.query?.first}`}>
+              <a>{router.query?.first}</a>
+            </Link>
           </span>
           <h4>
             <a href="single.html" title="">

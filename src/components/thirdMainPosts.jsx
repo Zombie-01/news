@@ -1,5 +1,5 @@
 import blog_square_01 from "../upload/blog_square_01.jpg";
-import Img from "./img";
+
 const ThirdMainPost = ({ title, list }) => {
   return (
     <>
@@ -19,12 +19,12 @@ const ThirdMainPost = ({ title, list }) => {
         </h3>
       </div>
       {list.map((e, i) => (
-        <>
+        <div key={i}>
           <div key={i} className="blog-box row">
             <div className="col-md-4">
               <div className="post-media">
                 <a href="single.html" title="">
-                  <Img src={blog_square_01.src} alt="" className="img-fluid" />
+                  <img src={blog_square_01.src} alt="" className="img-fluid" />
                   <div className="hovereffect"></div>
                 </a>
               </div>
@@ -60,7 +60,7 @@ const ThirdMainPost = ({ title, list }) => {
             </div>
           </div>
           <hr className="invis" />
-        </>
+        </div>
       ))}
     </>
   );
